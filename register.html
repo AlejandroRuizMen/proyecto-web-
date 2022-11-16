@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="regis.css">
+    <script defer src="firebase.js"></script>
+</head>
+
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+   <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
+
+    <div class="d-flex justify-content-center">
+      <img src="usuario.png" 
+      alt="login-icon"
+      style="height: 7rem"
+      />
+     </div>
+
+
+    <form class="row g-3 needs-validation" id="form" onsubmit="return validacion()">
+      <div class="container">
+        <div class="col-md-12">
+          <label for="Nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="Nombre" required>
+          <div class="valid-feedback">
+           
+          </div>
+           
+          </div>
+        
+
+        <div class="col-md-12">
+            <label for="Email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="Email" required>
+            <div class="invalid-feedback">
+           
+            </div>
+      </div>
+
+ 
+        <div class="col-md-12">
+          <label for="Contraseña" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" required>
+          <div class="invalid-feedback">
+           
+          </div>
+        </div>
+
+
+        <div class="col-md-12">
+          <label class="form-label" for="form3Example4cd">Repita la contraseña</label>
+          <input type="password" id="secpassword" class="form-control typeform" />
+          <div class="invalid-feedback">
+           
+          </div>
+        </div>
+
+
+
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkbox" required>
+            <label class="checkbox" for="invalidCheck">Acepto los términos y condiciones</label>
+            <div class="invalid-feedback">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <button onclick="Registra()" class="btn btn-primary" type="submit" id="Registrar" >Aceptar</button>
+          
+        </div>
+      </div>
+
+    </div>
+      </form>
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+    </script>
+    <script src = "https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+</body>
+</html>

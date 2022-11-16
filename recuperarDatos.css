@@ -1,0 +1,48 @@
+body{
+		
+	font-family: Arial;
+}
+
+#main-container{
+	margin: 150px auto;
+	width: 600px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 10px;
+}
+
+thead{
+	background-color: rgb(99, 99, 104);
+	border-bottom: solid 5px rgb(5, 96, 133);
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: rgb(227, 226, 226);
+}
+
+tr:hover td{
+	background-color: rgb(139, 136, 103);
+	color: white;
+}
+
+.button{
+
+    color: aliceblue;
+	height: 50px;
+	background-color:  rgb(52, 56, 58);
+	border-radius: 6px;
+
+}
+
+
+
+
